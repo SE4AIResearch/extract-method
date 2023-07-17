@@ -11,3 +11,39 @@ justify-content: flex-start;
 align-items: center;
 display: inline-flex;
 }
+.Toolbar {
+width: 100vw;
+height: 50px;
+background: #7F7F7F;
+justify-content: center;
+align-items: flex-start;
+display: inline-flex;
+margin: 0px;
+}
+
+header {
+justify-content: center;
+}
+
+.ToolButton {
+flex: 1 1 0;
+align-self: stretch;
+padding-top: 13px;
+padding-bottom: 12px;
+background: rgba(197.62, 94.70, 94.70, 0);
+border: 0.50px rgba(0, 0, 0, 0) solid;
+justify-content: center;
+align-items: center;
+display: inline-flex
+}
+
+.TextButton {
+width: 100vw/5;
+height: 25px;
+text-align: center;
+color: white;
+font-size: 12px;
+font-family: Inter;
+font-weight: 400;
+word-wrap: break-word;
+}
