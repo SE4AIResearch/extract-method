@@ -12,13 +12,14 @@ async function requestGitHub() {
     watchElement.insertAdjacentHTML("afterend", html2);
 }
 
-async function requestSourceForge() {;
+async function requestSourceForge(period, const week) {;
     const currentDate = new Date();
     const day = currentDate.getDate();
     const month = currentDate.getMonth() + 1;
     const year = currentDate.getFullYear();
     const today = `${year}-${month}-${day}`;
-    const url = "https://sourceforge.net/projects/anti-copy-paster/files/stats/json?start_date=2023-06-30&end_date=" + today;
+    //for if monthly, weekly, daily with the const week thing using if statements
+    const url = "https://sourceforge.net/projects/anti-copy-paster/files/stats/json?start_date=2023-06-30&end_date=" + today + "&period=" + period;
     const response = await fetch(url);
     const data = await response.json();
     const downloadElement = document.getElementById("Download");
@@ -27,6 +28,8 @@ async function requestSourceForge() {;
 }
 
 
-requestSourceForge();
+requestSourceForge("monthly");
+requestSourceForge("weekly");
+requestSourceForge("daily");
 requestGitHub();
 
