@@ -6,8 +6,8 @@
     <link rel= "stylesheet" href="main.css">
 </head>
 <body>
-
-<div class="PublicationsPage" style="width: 100%; height: 100%; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
+<script src="publicationPopup.js"></script>
+<div class="PublicationsPage" id="blur"    style="width: 100%; height: 100%; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
     <div class="Toolbar">
         <div class="ToolButton">
             <div class="TextButton" id="Home"><a href="index.html" class="ToolLink">Home</a></div>
@@ -35,21 +35,9 @@
                     <li>
                         AlOmar, E.A., Ivanov, A., Kurbatova, Z., Golubev, Y., Mkaouer, M.W., Ouni, A., Bryksin, T., Nguyen, L., Kini, A. and Thakur, A., 2023. Just-in-time code duplicates extraction. Information and Software Technology, 158, p.107169.
                         <ul style="font-size:18px">
-                            <li style="margin:10px"><a style="color: blue; text-decoration: underline;" href="https://arxiv.org/pdf/2302.03416.pdf">Publication</a></li>
-                            <li style="margin:10px"><a style="color: blue; text-decoration: underline;" href="https://zenodo.org/record/7428835">Dataset</a></li>
-                            <li style="margin:10px"><p style="margin:0px">
-                                @article{alomar2023just,<br>
-                                title={Just-in-time code duplicates extraction},<br>
-                                author={AlOmar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,
-                                Yaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen,
-                                Le and Kini, Amit and Thakur, Aditya},<br>
-                                journal={Information and Software Technology},<br>
-                                volume={158},<br>
-                                pages={107169},<br>
-                                year={2023},<br>
-                                publisher={Elsevier}<br>
-                                }
-                            </p></li>
+                            <li style="margin:10px"><button type="button" onclick="https://arxiv.org/pdf/2302.03416.pdf">Publication</button></li>
+                            <li style="margin:10px"><button type="button" onclick="https://zenodo.org/record/7428835">Dataset</button></li>
+                            <li style="margin:10px"><button type="button" onclick="openCitation('publication1')">Cite</button></li>
                         </ul>
                     </li>
 
@@ -61,25 +49,45 @@
                 <li>
                     AlOmar, E.A., Ivanov, A., Kurbatova, Z., Golubev, Y., Mkaouer, M.W., Ouni, A., Bryksin, T., Nguyen, L., Kini, A. and Thakur, A., 2022, October. AntiCopyPaster: extracting code duplicates as soon as they are introduced in the IDE. In Proceedings of the 37th IEEE/ACM International Conference on Automated Software Engineering (pp. 1-4).
                     <ul style="font-size:18px">
-                        <li style="margin:10px"><a style="color: blue; text-decoration: underline;" href="https://arxiv.org/pdf/2112.15230.pdf">Publication</a></li>
-                        <li style="margin:10px"><a style="color: blue; text-decoration: underline;" href="https://zenodo.org/record/7428835">Dataset</a></li>
-                        <li style="margin:10px"><p style="margin:0px">
-                            @inproceedings{alomar2022anticopypaster,<br>
-                            title={AntiCopyPaster: Extracting Code Duplicates As Soon As They Are Introduced in the IDE},<br>
-                            author={Alomar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,
-                            Yaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen, Le and Kini,
-                            Amit and Thakur, Aditya},<br>
-                            booktitle={37th IEEE/ACM International Conference on Automated Software Engineering (ASE)},<br>
-                            pages={1--4},<br>
-                            year={2022}<br>
-                            }
-                        </p></li>
+                        <li style="margin:10px"><button type="button" onclick="https://arxiv.org/pdf/2112.15230.pdf">Publication</button></li>
+                        <li style="margin:10px"><button type="button" onclick="https://zenodo.org/record/7428835">Dataset</button></li>
+                        <li style="margin:10px"><button type="button" onclick="openCitation('publication2')">Cite</button></li>
                     </ul>
                 </li>
             </ul>
         </div>
 
     </div>
+
+</div>
+<div id="publication1" class="popup" style="visibility:hidden">
+    <p>@article{alomar2023just,<br>
+        title={Just-in-time code duplicates extraction},<br>
+        author={AlOmar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,
+        Yaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen,
+        Le and Kini, Amit and Thakur, Aditya},<br>
+        journal={Information and Software Technology},<br>
+        volume={158},<br>
+        pages={107169},<br>
+        year={2023},<br>
+        publisher={Elsevier}<br>
+        }
+    </p>
+    <button type="button" onclick="closeCitation('publication1')">Ok</button>
+</div>
+<div id="publication2" class="popup" style="visibility:hidden;">
+    <p>
+        @inproceedings{alomar2022anticopypaster,<br>
+        title={AntiCopyPaster: Extracting Code Duplicates As Soon As They Are Introduced in the IDE},<br>
+        author={Alomar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,
+        Yaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen, Le and Kini,
+        Amit and Thakur, Aditya},<br>
+        booktitle={37th IEEE/ACM International Conference on Automated Software Engineering (ASE)},<br>
+        pages={1--4},<br>
+        year={2022}<br>
+        }
+    </p>
+    <button type="button" onclick="closeCitation('publication2')">Ok</button>
 </div>
 
 </body>

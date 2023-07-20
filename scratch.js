@@ -1,12 +1,15 @@
 async function requestGitHub() {
     const response = await fetch("https://api.github.com/repos/JetBrains-Research/anti-copy-paster");
     const data = await response.json();
-    const forkElement = document.getElementById("Forks");
+    const forkElement = document.getElementById("Forked");
     const html = `<p>${data.forks_count}</p>`;
     forkElement.insertAdjacentHTML("afterend", html);
-    const watchElement = document.getElementById("Watched")
+    const starElement = document.getElementById("Starred");
     const html1 = `<p>${data.watchers_count}</p>`;
-    watchElement.insertAdjacentHTML("afterend", html1);
+    starElement.insertAdjacentHTML("afterend", html1);
+    const watchElement = document.getElementById("Watched");
+    const html2 = `<p>${data.subscribers_count}</p>`;
+    watchElement.insertAdjacentHTML("afterend", html2);
 }
 
 async function requestSourceForge() {;
@@ -22,6 +25,7 @@ async function requestSourceForge() {;
     const html = `<p>${data.total}</p>`;
     downloadElement.insertAdjacentHTML("afterend", html);
 }
+
 
 requestSourceForge();
 requestGitHub();
