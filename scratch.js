@@ -12,24 +12,46 @@ async function requestGitHub() {
     watchElement.insertAdjacentHTML("afterend", html2);
 }
 
-async function requestSourceForge(period, const week) {;
+async function requestSourceForge(period, lenOfPeriod) {;
     const currentDate = new Date();
-    const day = currentDate.getDate();
-    const month = currentDate.getMonth() + 1;
-    const year = currentDate.getFullYear();
+    let day = currentDate.getDate();
+    let month = currentDate.getMonth()+1;
+    let year = currentDate.getFullYear();
     const today = `${year}-${month}-${day}`;
-    //for if monthly, weekly, daily with the const week thing using if statements
-    const url = "https://sourceforge.net/projects/anti-copy-paster/files/stats/json?start_date=2023-06-30&end_date=" + today + "&period=" + period;
+        if(lenOfPeriod == 2){
+            currentDate.setMonth(currentDate.getMonth() - 1);
+        }
+        if(lenOfPeriod == 1){
+            currentDate.setDate(currentDate.getDate() - 7);
+        }
+        if(lenOfPeriod == 0){
+            currentDate.setDate(currentDate.getDate() - 1);
+        }
+    let day1 = currentDate.getDate();
+    let month1 = currentDate.getMonth()+1;
+    let year1 = currentDate.getFullYear();
+    let before = `${year1}-${month1}-${day1}`
+        if(lenOfPeriod == 3){
+            before = "2023-06-30";
+        }
+    const url = "https://sourceforge.net/projects/anti-copy-paster/files/stats/json?start_date=" + before + "&end_date=" + today + "&period=daily";
     const response = await fetch(url);
     const data = await response.json();
-    const downloadElement = document.getElementById("Download");
+    const downloadElement = document.getElementById(period);
     const html = `<p>${data.total}</p>`;
+    console.log(data.total, period);
     downloadElement.insertAdjacentHTML("afterend", html);
 }
-
-
-requestSourceForge("monthly");
-requestSourceForge("weekly");
-requestSourceForge("daily");
+try{
+requestSourceForge("total", 3);
+requestSourceForge("monthly",2);
+requestSourceForge("weekly",1);
+requestSourceForge("daily",0);
 requestGitHub();
-
+} catch(error) {
+requestSourceForge("total", 3);
+requestSourceForge("monthly",2);
+requestSourceForge("weekly",1);
+requestSourceForge("daily",0);
+requestGitHub();
+}
