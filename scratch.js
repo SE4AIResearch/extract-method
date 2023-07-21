@@ -38,7 +38,7 @@ async function requestSourceForge(period, lenOfPeriod) {;
     const response = await fetch(url);
     const data = await response.json();
     const downloadElement = document.getElementById(period);
-    const html = `<p>${data.total}</p>`;
+    const html = `<p id=${period}1>${data.total}</p>`;
     console.log(data.total, period);
     downloadElement.insertAdjacentHTML("afterend", html);
 }

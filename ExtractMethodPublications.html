@@ -34,8 +34,8 @@
             <ul style="font-size:20px">
                     <li>
                         <p>AlOmar, E.A., Ivanov, A., Kurbatova, Z., Golubev, Y., Mkaouer, M.W., Ouni, A., Bryksin, T., Nguyen, L., Kini, A. and Thakur, A., 2023. Just-in-time code duplicates extraction. Information and Software Technology, 158, p.107169.</p>
-                        <button type="button" onclick="https://arxiv.org/pdf/2302.03416.pdf">Publication</button>
-                        <button type="button" onclick="https://zenodo.org/record/7428835">Dataset</button>
+                        <button type="button" onclick="window.location.href='https://arxiv.org/pdf/2302.03416.pdf'">Publication</button>
+                        <button type="button" onclick="window.location.href='https://zenodo.org/record/7428835'">Dataset</button>
                         <button type="button" onclick="openCitation('publication1')">Cite</button>
                     </li>
 
@@ -46,8 +46,8 @@
             <ul style="font-size:20px">
                 <li>
                     <p>AlOmar, E.A., Ivanov, A., Kurbatova, Z., Golubev, Y., Mkaouer, M.W., Ouni, A., Bryksin, T., Nguyen, L., Kini, A. and Thakur, A., 2022, October. AntiCopyPaster: extracting code duplicates as soon as they are introduced in the IDE. In Proceedings of the 37th IEEE/ACM International Conference on Automated Software Engineering (pp. 1-4).</p>
-                    <button type="button" onclick="https://arxiv.org/pdf/2112.15230.pdf">Publication</button>
-                    <button type="button" onclick="https://zenodo.org/record/7428835">Dataset</button>
+                    <button type="button" onclick="window.location.href='https://arxiv.org/pdf/2112.15230.pdf'">Publication</button>
+                    <button type="button" onclick="window.location.href='https://zenodo.org/record/7428835'">Dataset</button>
                     <button type="button" onclick="openCitation('publication2')">Cite</button>
                 </li>
             </ul>
@@ -56,8 +56,9 @@
     </div>
 
 </div>
-<div id="publication1" class="popup" style="visibility:hidden">
-    <p>@article{alomar2023just,<br>
+<div id="publication1" class="popup">
+    <h3>Citation</h3>
+    <p style="margin:10px">@article{alomar2023just,<br>
         title={Just-in-time code duplicates extraction},<br>
         author={AlOmar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,
         Yaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen,
@@ -69,10 +70,12 @@
         publisher={Elsevier}<br>
         }
     </p>
-    <button type="button" onclick="closeCitation('publication1')">Ok</button>
+    <button type="button" onclick="clipboardCopy('publication1')">Copy</button>
+    <button type="button" onclick="closeCitation('publication1')" style="display:flex">Ok</button>
 </div>
 <div id="publication2" class="popup" style="visibility:hidden;">
-    <p>
+    <h3>Citation</h3>
+    <p style="margin:10px">
         @inproceedings{alomar2022anticopypaster,<br>
         title={AntiCopyPaster: Extracting Code Duplicates As Soon As They Are Introduced in the IDE},<br>
         author={Alomar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,
@@ -83,6 +86,7 @@
         year={2022}<br>
         }
     </p>
+    <button type="button" onclick="clipboardCopy('publication2')">Copy</button>
     <button type="button" onclick="closeCitation('publication2')">Ok</button>
 </div>
 
