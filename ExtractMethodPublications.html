@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Extract Method Publications</title>
     <link rel= "stylesheet" href="main.css">
+    <meta name="viewport" content=
+            "width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
 <script src="publicationPopup.js"></script>
@@ -73,7 +76,8 @@
         publisher={Elsevier}<br>
         }
     </p>
-    <button type="button" onclick="clipboardCopy('publication1')">Copy</button>
+    <button type="button" onclick="clipboardCopy('@article{alomar2023just,\ntitle={Just-in-time code duplicates extraction},\nauthor={AlOmar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,\nYaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen,\nLe and Kini, Amit and Thakur, Aditya},\njournal={Information and Software Technology},\nvolume={158},\npages={107169},\nyear={2023},\npublisher={Elsevier}\n}')">
+        Copy</button>
     <button type="button" onclick="closeCitation('publication1')" style="display:flex">Ok</button>
 </div>
 <div id="publication2" class="popup" style="visibility:hidden;">
@@ -89,9 +93,10 @@
         year={2022}<br>
         }
     </p>
-    <button type="button" onclick="clipboardCopy('publication2')">Copy</button>
+    <button type="button" onclick="clipboardCopy('@inproceedings{alomar2022anticopypaster,\ntitle={AntiCopyPaster: Extracting Code Duplicates As Soon As They Are Introduced in the IDE},\nauthor={Alomar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,\nYaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen, Le and Kini,\nAmit and Thakur, Aditya},\nbooktitle={37th IEEE/ACM International Conference on Automated Software Engineering (ASE)},\npages={1--4},\nyear={2022}\n}')">
+        Copy</button>
     <button type="button" onclick="closeCitation('publication2')">Ok</button>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
