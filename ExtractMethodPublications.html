@@ -11,27 +11,33 @@
 <body>
 <script src="publicationPopup.js"></script>
 <div class="PublicationsPage" id="blur"    style="width: 100%; height: 100%; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
-    <div class="Toolbar">
-        <div class="ToolButton">
-            <div class="TextButton" id="Home"><a href="index.html" class="ToolLink">Home</a></div>
+    <nav class="navbar navbar-expand-md">
+        <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav nav-fill w-100" id="toolbar">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ExtractMethodRecommender.html">Extract Method Recommender</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ExtractMethodResearch.html">Extract Method Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ExtractMethodPublications.html">Extract Method Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Support.html">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">About</a>
+                </li>
+            </ul>
         </div>
-        <div class="ToolButton">
-            <div class="TextButton" id="ExtractMethodRecommender"><a href="ExtractMethodRecommender.html" class="ToolLink">Extract Method Recommender</a></div>
-        </div>
-
-        <div class="ToolButton">
-            <div class="TextButton" id="ExtractMethodResearch"><a href="ExtractMethodResearch.html" class="ToolLink">Extract Method Research</a></div>
-        </div>
-        <div class="ToolButton">
-            <div class="TextButton" id="ExtractMethodPublications"><a href="ExtractMethodPublications.html" class="ToolLink">Extract Method Publications</a></div>
-        </div>
-        <div class="ToolButton">
-            <div class="TextButton" id="Support"><a href="Support.html" class="ToolLink">Support</a></div>
-        </div>
-        <div class="ToolButton">
-            <div class="TextButton" id="About"><a href="About.html" class="ToolLink">About</a></div>
-        </div>
-    </div>
+    </nav>
     <div class="Title">
         <div class="ExtractMethod">Extract Method Publications</div>
     </div>

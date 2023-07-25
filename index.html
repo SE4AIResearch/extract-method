@@ -10,7 +10,7 @@
 </head>
 <body>
 <div class="Home-Page">
-    <div class="Toolbar" >
+<!--    <div class="Toolbar" >
         <div class="ToolButton">
             <div class="TextButton" id="Home"><a href="index.html" class="ToolLink">Home</a></div>
         </div>
@@ -30,14 +30,71 @@
         <div class="ToolButton">
             <div class="TextButton" id="About"><a href="About.html" class="ToolLink">About</a></div>
         </div>
-    </div>
+    </div>-->
+    <nav class="navbar navbar-expand-md">
+        <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav nav-fill w-100" id="toolbar">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ExtractMethodRecommender.html">Extract Method Recommender</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ExtractMethodResearch.html">Extract Method Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ExtractMethodPublications.html">Extract Method Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Support.html">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <div class="Title">
-        <div class="ExtractMethod">Extract Method</div>
+        <h1 class="ExtractMethod">Extract Method</h1>
     </div>
 
     <div class= "RestOfPage" style="display:flex; flex-direction:column; justify-content:center; align-items: center; gap: 25px">
+        <div class="container features" style="background: #D9D9D9;">
+            <div class="column">
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                    <h1 class="feature-title text-center">Introduction</h1>
+                    <p class="text-justify" style="margin:20px; text-align: justify; font-size: 1.3em">
+                        Refactoring is the practice of improving software quality without altering its behavior.
+                        Developers intuitively refactor their code for multiple purposes: improving program comprehension, removing duplicate code, reducing complexity, dealing with technical debt, and removing code smells.
+                        Refactoring duplicate code consists in taking a code fragment and moving it to create a new method, while replacing all instances of that fragment with a call to this newly created method.
+                        This refactoring is known as Extract Method.
+                        <br>
+                        <br>
+                        The goal of this project is to aid developers with just-in-time refactoring of duplicate code.
+                        Unlike the existing approaches that follow a posterior approach of removing accumulated duplicate code, we aim at increasing the awareness of developers while writing their code, i.e., removing duplicate code as soon as it is introduced in their code base.
 
-        <div class="Rectangle1" style="overflow:auto; text-align:justify; font-size: 20px; width: 95%; height: 850px; background: #D9D9D9; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+                    </p>
+                    <div style="display:flex; flex-direction:row">
+                        <img style="margin:2%; margin-right: 1%; width:47%" src="https://media.discordapp.net/attachments/1102655103820894329/1131728226268499978/image.png?width=1479&height=963" alt="">
+                        <img style="margin:2%; margin-left: 1%; width: 47%" src="https://media.discordapp.net/attachments/1102655103820894329/1131728226536923137/image.png?width=1425&height=1203" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container features" style="background: #D9D9D9;">
+            <div class="column align-items-center">
+                <div class="col-lg-12 col-md-12 col-sm-12" style="display:inline-block; vertical-align:middle">
+                    <h1 class="feature-title text-center">Extract Method Tool Demonstration</h1>
+                    <iframe width="80%" height="80%" src="https://www.youtube.com/embed/_wwHg-qFjJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!--<div class="Rectangle1" style="overflow:auto; text-align:justify; font-size: 20px; width: 95%; height: 850px; background: #D9D9D9; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
             <h1 style="display: flex; flex-direction:column; align-items:center; justify-content:center;">Introduction</h1>
             <p style="margin:20px">
                 Refactoring is the practice of improving software quality without altering its behavior.
@@ -59,7 +116,7 @@
             <h1>Extract Method Tool Demonstration</h1>
             <iframe width="70%" height="80%" src="https://www.youtube.com/embed/_wwHg-qFjJY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
-    </div>
+    </div>-->
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
