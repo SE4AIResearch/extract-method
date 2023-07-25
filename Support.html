@@ -10,60 +10,66 @@
 </head>
 <body>
 <div class="SupportPage" style="width: 100%; height: 100%; background: white; flex-direction: column; justify-content: flex-start; align-items: center; display: inline-flex">
-  <div class="Toolbar">
-    <div class="ToolButton">
-      <div class="TextButton" id="Home"><a href="index.html" class="ToolLink">Home</a></div>
+  <nav class="navbar navbar-expand-md">
+    <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="main-navigation">
+      <ul class="navbar-nav nav-fill w-100" id="toolbar">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ExtractMethodRecommender.html">Extract Method Recommender</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ExtractMethodResearch.html">Extract Method Research</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ExtractMethodPublications.html">Extract Method Publications</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="Support.html">Support</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="About.html">About</a>
+        </li>
+      </ul>
     </div>
-    <div class="ToolButton">
-      <div class="TextButton" id="ExtractMethodRecommender"><a href="ExtractMethodRecommender.html" class="ToolLink">Extract Method Recommender</a></div>
-    </div>
-
-    <div class="ToolButton">
-      <div class="TextButton" id="ExtractMethodResearch"><a href="ExtractMethodResearch.html" class="ToolLink">Extract Method Research</a></div>
-    </div>
-    <div class="ToolButton">
-      <div class="TextButton" id="ExtractMethodPublications"><a href="ExtractMethodPublications.html" class="ToolLink">Extract Method Publications</a></div>
-    </div>
-    <div class="ToolButton">
-      <div class="TextButton" id="Support"><a href="Support.html" class="ToolLink">Support</a></div>
-    </div>
-    <div class="ToolButton">
-      <div class="TextButton" id="About"><a href="About.html" class="ToolLink">About</a></div>
-    </div>
-  </div>
+  </nav>
   <div class="Title">
-    <div class="ExtractMethod">Support</div>
+    <h1 class="ExtractMethod">Support</h1>
   </div>
-  <div style="display: flex; flex-direction: column; gap: 20px">
-    <div class="Support">
-      <h1> Extract Method Support</h1>
+  <div class="RestOfPage container column" style="display: flex; flex-direction: column; justify-content:center; align-items:center; gap:25px;">
+    <div class="Support col-10">
+      <h1>Extract Method Support</h1>
       <p>PLACEHOLDER A multi-university team currently supports the srcML infrastructure.  We are committed to continuing support for the srcML project for the forseeable future. The latest major srcML release was made available in January 2020.
       </p><p>
         srcML is currently supported in part by a grant from the US
       </p>
     </div>
-    <div class="Support">
+    <div class="Support col-10">
       <h1>Issue/Bug Reporting</h1>
       <p> The public GitHub Repository is <a href="https://github.com/JetBrains-Research/anti-copy-paster">https://github.com/JetBrains-Research/anti-copy-paster</a>.
       </p><p>
         To report an error or bug, please <a href="https://github.com/JetBrains-Research/anti-copy-paster/issues">submit an issue to our GitHub repository</a> and include a detailed description along with any example code to reproduce the problem.
       </p>
     </div>
-    <div class="Support">
+    <div class="Support col-10">
       <h1>Extract Method Tool Help</h1>
       <ul>
         <li><a href="">Clustering Settings Help</a></li>
         <li><a href="">Advanced Settings Help</a></li>
       </ul>
     </div>
-    <div class="Support">
+    <div class="Support col-10">
       <h1>Contact and Discussion</h1>
       <p style="line-height:2.2em;"> For questions or suggestions, please contact us via email at <a href="mailto:ealomar@stevens.edu">ealomar@stevens.edu</a> and <a href="mailto:mwmvse@g.rit.edu">mwmvse@g.rit.edu</a>.
         </p><p>
         To keep up with development, ask questions, or get involved with the conversation, join our discord
       </p>
     </div>
-    <div class="Support">
+    <div class="Support col-10">
       <h1>Citing</h1>
       <p> If you use Extract Method as part of your research and need a citation, we suggest using these two papers:
       </p><p>
@@ -72,7 +78,7 @@
         CITATION
       </p>
     </div>
-  </div>
+</div>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>

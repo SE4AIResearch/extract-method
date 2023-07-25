@@ -39,28 +39,28 @@
         </div>
     </nav>
     <div class="Title">
-        <div class="ExtractMethod">Extract Method Publications</div>
+        <h1 class="ExtractMethod">Extract Method Publications</h1>
     </div>
-    <div class= "RestOfPage" style="display:flex; flex-direction:column; justify-content:center; align-items: center; gap: 25px">
-        <div class="Publish">
+    <div class= "RestOfPage container column" style="display:flex; flex-direction:column; justify-content:center; align-items: center; gap: 25px">
+        <div class="Publish col-sm-11 col-md-9 col-lg-9">
             <ul style="font-size:20px">
                     <li>
                         <p>AlOmar, E.A., Ivanov, A., Kurbatova, Z., Golubev, Y., Mkaouer, M.W., Ouni, A., Bryksin, T., Nguyen, L., Kini, A. and Thakur, A., 2023. Just-in-time code duplicates extraction. Information and Software Technology, 158, p.107169.</p>
-                        <button type="button" onclick="window.location.href='https://arxiv.org/pdf/2302.03416.pdf'">Publication</button>
-                        <button type="button" onclick="window.location.href='https://zenodo.org/record/7428835'">Dataset</button>
-                        <button type="button" onclick="openCitation('publication1')">Cite</button>
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='https://arxiv.org/pdf/2302.03416.pdf'">Publication</button>
+                        <button type="button" class="btn btn-primary" onclick="window.location.href='https://zenodo.org/record/7428835'">Dataset</button>
+                        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Publication1">Cite</button>
                     </li>
 
             </ul>
 
         </div>
-        <div class="Publish">
+        <div class="Publish col-sm-11 col-md-9 col-lg-9">
             <ul style="font-size:20px">
                 <li>
                     <p>AlOmar, E.A., Ivanov, A., Kurbatova, Z., Golubev, Y., Mkaouer, M.W., Ouni, A., Bryksin, T., Nguyen, L., Kini, A. and Thakur, A., 2022, October. AntiCopyPaster: extracting code duplicates as soon as they are introduced in the IDE. In Proceedings of the 37th IEEE/ACM International Conference on Automated Software Engineering (pp. 1-4).</p>
-                    <button type="button" onclick="window.location.href='https://arxiv.org/pdf/2112.15230.pdf'">Publication</button>
-                    <button type="button" onclick="window.location.href='https://zenodo.org/record/7428835'">Dataset</button>
-                    <button type="button" onclick="openCitation('publication2')">Cite</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='https://arxiv.org/pdf/2112.15230.pdf'">Publication</button>
+                    <button type="button" class="btn btn-primary" onclick="window.location.href='https://zenodo.org/record/7428835'">Dataset</button>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#Publication2">Cite</button>
                 </li>
             </ul>
         </div>
@@ -68,41 +68,63 @@
     </div>
 
 </div>
-<div id="publication1" class="popup">
-    <h3>Citation</h3>
-    <p style="margin:10px">@article{alomar2023just,<br>
-        title={Just-in-time code duplicates extraction},<br>
-        author={AlOmar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,
-        Yaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen,
-        Le and Kini, Amit and Thakur, Aditya},<br>
-        journal={Information and Software Technology},<br>
-        volume={158},<br>
-        pages={107169},<br>
-        year={2023},<br>
-        publisher={Elsevier}<br>
-        }
-    </p>
-    <button type="button" onclick="clipboardCopy('@article{alomar2023just,\ntitle={Just-in-time code duplicates extraction},\nauthor={AlOmar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,\nYaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen,\nLe and Kini, Amit and Thakur, Aditya},\njournal={Information and Software Technology},\nvolume={158},\npages={107169},\nyear={2023},\npublisher={Elsevier}\n}')">
-        Copy</button>
-    <button type="button" onclick="closeCitation('publication1')" style="display:flex">Ok</button>
+<div class="modal fade" id="Publication1"  tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Cite</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>@article{alomar2023just,<br>
+                    title={Just-in-time code duplicates extraction},<br>
+                    author={AlOmar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,
+                    Yaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen,
+                    Le and Kini, Amit and Thakur, Aditya},<br>
+                    journal={Information and Software Technology},<br>
+                    volume={158},<br>
+                    pages={107169},<br>
+                    year={2023},<br>
+                    publisher={Elsevier}<br>
+                    }</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="clipboardCopy('@article{alomar2023just,\ntitle={Just-in-time code duplicates extraction},\nauthor={AlOmar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,\nYaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen,\nLe and Kini, Amit and Thakur, Aditya},\njournal={Information and Software Technology},\nvolume={158},\npages={107169},\nyear={2023},\npublisher={Elsevier}\n}')">
+                    Copy</button>
+            </div>
+        </div>
+    </div>
 </div>
-<div id="publication2" class="popup" style="visibility:hidden;">
-    <h3>Citation</h3>
-    <p style="margin:10px">
-        @inproceedings{alomar2022anticopypaster,<br>
-        title={AntiCopyPaster: Extracting Code Duplicates As Soon As They Are Introduced in the IDE},<br>
-        author={Alomar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,
-        Yaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen, Le and Kini,
-        Amit and Thakur, Aditya},<br>
-        booktitle={37th IEEE/ACM International Conference on Automated Software Engineering (ASE)},<br>
-        pages={1--4},<br>
-        year={2022}<br>
-        }
-    </p>
-    <button type="button" onclick="clipboardCopy('@inproceedings{alomar2022anticopypaster,\ntitle={AntiCopyPaster: Extracting Code Duplicates As Soon As They Are Introduced in the IDE},\nauthor={Alomar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,\nYaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen, Le and Kini,\nAmit and Thakur, Aditya},\nbooktitle={37th IEEE/ACM International Conference on Automated Software Engineering (ASE)},\npages={1--4},\nyear={2022}\n}')">
-        Copy</button>
-    <button type="button" onclick="closeCitation('publication2')">Ok</button>
+
+<div class="modal fade" id="Publication2"  tabindex="-1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Cite</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>@inproceedings{alomar2022anticopypaster,<br>
+                    title={AntiCopyPaster: Extracting Code Duplicates As Soon As They Are Introduced in the IDE},<br>
+                    author={Alomar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,
+                    Yaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen, Le and Kini,
+                    Amit and Thakur, Aditya},<br>
+                    booktitle={37th IEEE/ACM International Conference on Automated Software Engineering (ASE)},<br>
+                    pages={1--4},<br>
+                    year={2022}<br>
+                    }</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" onclick="clipboardCopy('@inproceedings{alomar2022anticopypaster,\ntitle={AntiCopyPaster: Extracting Code Duplicates As Soon As They Are Introduced in the IDE},\nauthor={Alomar, Eman Abdullah and Ivanov, Anton and Kurbatova, Zarina and Golubev,\nYaroslav and Mkaouer, Mohamed Wiem and Ouni, Ali and Bryksin, Timofey and Nguyen, Le and Kini,\nAmit and Thakur, Aditya},\nbooktitle={37th IEEE/ACM International Conference on Automated Software Engineering (ASE)},\npages={1--4},\nyear={2022}\n}')">
+                    Copy</button>
+            </div>
+        </div>
+    </div>
 </div>
+
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 </html>
