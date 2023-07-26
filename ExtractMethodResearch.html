@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
 </head>
 <body>
-<div class="ResearchPage" style="width: 100%; height: 100%; background: white;">
+<div id="body" class="ResearchPage" style="width: 100%; height: 100%; background: white;">
     <nav class="navbar navbar-expand-md">
         <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
             <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,8 @@
         <h1 class="ExtractMethod">Extract Method Research</h1>
     </div>
     <div class="RestOfPage container column">
-        <div class="Rectangle1" style="font-size:1.2em; text-align:justify; background: #D9D9D9; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+        <div class="container column col-lg-12 col-md-12 col-sm-12">
+        <div class="Rectangle1" style=" margin-bottom:25px; font-size:1.2em; text-align:justify; background: #D9D9D9; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
             <p>Provided below are supplements to the original research on extract method refactoring that was performed using AntiCopyPaster.
             </p><p>
                 Experiment Data:
@@ -56,6 +57,7 @@
             </p><p>
                 AntiCopyPaster is able to correctly extract code duplicates with a precision score of 82% and a recall score of 82% with an average F-score of 82%.
             </p>
+        </div>
         </div>
     </div>
 </div>
