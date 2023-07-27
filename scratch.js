@@ -1,15 +1,19 @@
-async function requestGitHub() {
+async function requestGitHub(stat) {
     const response = await fetch("https://api.github.com/repos/JetBrains-Research/anti-copy-paster");
     const data = await response.json();
-    const forkElement = document.getElementById("Forked");
-    const html = `<p>${data.forks_count}</p>`;
-    forkElement.insertAdjacentHTML("afterend", html);
-    const starElement = document.getElementById("Starred");
-    const html1 = `<p>${data.watchers_count}</p>`;
-    starElement.insertAdjacentHTML("afterend", html1);
-    const watchElement = document.getElementById("Watched");
-    const html2 = `<p>${data.subscribers_count}</p>`;
-    watchElement.insertAdjacentHTML("afterend", html2);
+    if(stat == "Forked"){
+         const forkElement = document.getElementById(stat);
+         const html = `<p>${data.forks_count}</p>`;
+         forkElement.insertAdjacentHTML("afterend", html);
+    } else if (stat == "Starred"){
+        const starElement = document.getElementById(stat);
+        const html1 = `<p>${data.watchers_count}</p>`;
+        starElement.insertAdjacentHTML("afterend", html1);
+    }else if (stat == "Watched"){
+        const watchElement = document.getElementById("Watched");
+        const html2 = `<p>${data.subscribers_count}</p>`;
+        watchElement.insertAdjacentHTML("afterend", html2);
+    }
 }
 
 async function requestSourceForge(period, lenOfPeriod) {;
@@ -51,8 +55,12 @@ console.log(page);
 if(page == "HomePage"){
     try{
         requestSourceForge("total",3);
+        requestSourceForge("monthly",2);
+        requestGitHub("Starred");
     }catch (error) {
         requestSourceForge("total",3);
+        requestSourceForge("monthly",2);
+        requestGitHub("Starred");
     }
 } else if (page == "RecommenderPage") {
     try{
@@ -60,13 +68,17 @@ if(page == "HomePage"){
     requestSourceForge("monthly",2);
     requestSourceForge("weekly",1);
     requestSourceForge("daily",0);
-    requestGitHub();
+    requestGitHub("Forked");
+    requestGitHub("Starred");
+    requestGitHub("Watched");
     } catch(error) {
     requestSourceForge("total", 3);
     requestSourceForge("monthly",2);
     requestSourceForge("weekly",1);
     requestSourceForge("daily",0);
-    requestGitHub();
+    requestGitHub("Forked");
+    requestGitHub("Starred");
+    requestGitHub("Watched");
     }
 }
 
