@@ -1,8 +1,5 @@
 <?php
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
 
 $errors = [];
 $errorMessage = '';
@@ -26,15 +23,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if (empty($message)) {
     $errors[] = 'Message is empty';
   }
+    echo "hi";
 
-  if (!empty($errors)) {
-    $allErrors = join('<br/>', $errors);
-    $errorMessage = "<p style='color: red;'>{$allErrors}</p>";
-  } else {
-    $from = "From: normano39donald@yahoo.com" . "\r\n" .
-    $to = 'olofsnowman034@gmail.com';
-    mail($to,$subject, $message, $from)
-  }
 }
 
 function sanitizeInput($input) {
