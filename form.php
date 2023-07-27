@@ -47,3 +47,81 @@ function sanitizeInput($input) {
 
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About</title>
+    <link rel= "stylesheet" href="main.css">
+    <meta name="viewport" content=
+            "width=device-width, initial-scale=1" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+</head>
+<body>
+<div id="body" class="AboutPage" style="width: 100%; height: 100%; background: white;">
+    <nav class="navbar navbar-expand-md">
+        <button class="navbar-toggler navbar-dark" type="button" data-bs-toggle="collapse" data-bs-target="#main-navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="main-navigation">
+            <ul class="navbar-nav nav-fill w-100" id="toolbar">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ExtractMethodRecommender.html">Extract Method Recommender</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ExtractMethodResearch.html">Extract Method Research</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="ExtractMethodPublications.html">Extract Method Publications</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Support.html">Support</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="About.html">About</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="Title">
+        <h1 class="ExtractMethod">About</h1>
+    </div>
+    <div class="RestOfPage container column" style="font-size: 1.2em; display:flex; flex-direction:column; justify-content:center; align-items: center; ">
+        <div class="Rectangle1 col-10" style="text-align:justify; background: #D9D9D9; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); padding: 0px 15px;">
+            <p>This research on Extract Method Refactoring, along with the implementation of the code duplicates refactoring extraction tool was performed by the faculty and students of Stevens Institute of Technology and Rochester Institute of Technology in collaboration with JetBrains Research.
+                </p><p>
+                We invite fellow researchers and software engineers to provide us with feedback and extensions on our research and tool. Please feel free to reach out to the following individuals with your feedback or questions:
+                </p><p style="text-align:center">
+                Eman Abdullah AlOmar (ealomar@stevens.edu) <br>
+                Mohamed Wiem Mkaouer (mwmvse@rit.edu)</p>
+        </div>
+        <div class="col-10" style="display:flex; flex-direction:column; justify-content:center; align-items: center; padding-bottom:15px; background: #D9D9D9; box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)">
+            <h1>Contact Us</h1>
+        <form id="form" method="post" class="row g-3 justify-content-center">
+            <div class="col-5">
+                <label for="InputName" class="form-label ">Name</label>
+                <input name="name" type="text" class="form-control" id="InputName" placeholder="example@gmail.com" aria-describedby="nameHelp" required>
+            </div>
+            <div class="col-5" >
+                <label for="InputEmail" class="form-label">Email address</label>
+                <input name="email" type="email" class="form-control" id="InputEmail" aria-describedby="emailHelp" required>
+            </div>
+            <div class="col-10">
+                <label for="InputSubject" class="form-label">Subject</label>
+                <input name="subject" type="text" class="form-control" id="InputSubject" required>
+            </div>
+            <div class="col-10">
+                <label for="Message" class="form-label">Message</label>
+                <textarea name="message" class="form-control" rows="3" id="Message" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary col-10" id="submitForm">Submit</button>
+        </form>
+        </div>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+</body>
+</html>

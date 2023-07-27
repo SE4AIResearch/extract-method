@@ -42,16 +42,31 @@ async function requestSourceForge(period, lenOfPeriod) {;
     console.log(data.total, period);
     downloadElement.insertAdjacentHTML("afterend", html);
 }
-try{
-requestSourceForge("total", 3);
-requestSourceForge("monthly",2);
-requestSourceForge("weekly",1);
-requestSourceForge("daily",0);
-requestGitHub();
-} catch(error) {
-requestSourceForge("total", 3);
-requestSourceForge("monthly",2);
-requestSourceForge("weekly",1);
-requestSourceForge("daily",0);
-requestGitHub();
+function clipboardCopy(text){
+navigator.clipboard.writeText(text);
 }
+
+let page = document.body.className;
+console.log(page);
+if(page == "HomePage"){
+    try{
+        requestSourceForge("total",3);
+    }catch (error) {
+        requestSourceForge("total",3);
+    }
+} else if (page == "RecommenderPage") {
+    try{
+    requestSourceForge("total", 3);
+    requestSourceForge("monthly",2);
+    requestSourceForge("weekly",1);
+    requestSourceForge("daily",0);
+    requestGitHub();
+    } catch(error) {
+    requestSourceForge("total", 3);
+    requestSourceForge("monthly",2);
+    requestSourceForge("weekly",1);
+    requestSourceForge("daily",0);
+    requestGitHub();
+    }
+}
+
