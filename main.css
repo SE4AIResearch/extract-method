@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
 *{
-    font-family:Times New Roman;
+    font-family:'Open Sans', sans-serif;
 }
 
 #body {
@@ -16,7 +18,7 @@ margin-bottom: 10px;
 .Publish button {
     background: #4896CF;
     border: #4896CF;
-    border-radius: 0px;
+    border-radius: 8px;
 }
 
 #submitForm {
@@ -25,12 +27,12 @@ margin-bottom: 10px;
         border-radius: 0px;
 
 }
-#form input, #form textarea{
+/*#form input, #form textarea{
  border-radius: 0px;
 }
 #form div {
     padding:0px;
-}
+}*/
 #downloadButton:hover {
     background-color: #BF2438;
     border-color: #A32628;
@@ -56,6 +58,26 @@ margin-bottom: 10px;
 width:900px; height:400px
 
 }
+
+ #table thead th{
+    width: 20%;
+ }
+
+#table {
+    --bs-table-bg: none;
+    --bs-table-border-color: #D9D9D9;
+    border-right-color: white;
+    border-left-color: white;
+    border-top-color: white;
+    border-bottom-color: white;
+}
+#table .leftEdge {
+    border-left-color: #D9D9D9;
+}
+
+#table .rightEdge {
+    border-right-color: #D9D9D9;
+}
 @media only screen and (max-width: 768px) {
     .Title {
     width: 100vw;
@@ -67,6 +89,7 @@ width:900px; height:400px
     display: inline-flex;
     }
     .ExtractMethod {
+    font-family: 'Montserrat', sans-serif;
     height: 100px;
     text-align: center;
     color: white;
@@ -92,6 +115,7 @@ width:900px; height:400px
     display: inline-flex;
     }
     .ExtractMethod {
+    font-family: 'Montserrat', sans-serif;
     width: 600px;
     height: 50px;
     text-align: center;
@@ -106,7 +130,10 @@ width:900px; height:400px
 
 .Publish {
 background: #D9D9D9;
+border-radius: 8px;
+padding:10px;
 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+
 }
 
 .popup {
@@ -184,4 +211,8 @@ box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
     font-size: 1.2em;
     margin-bottom:10px;
     text-align:justify;
+}
+
+.Releases h2 {
+    text-align: center;
 }
